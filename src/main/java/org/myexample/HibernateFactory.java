@@ -25,6 +25,7 @@ public class HibernateFactory {
 		configuration.setProperty("hibernate.show_sql", "true");
 		configuration.addAnnotatedClass (Movies.class); // to zostalo dodane
 		configuration.addAnnotatedClass (Author.class);
+		configuration.addAnnotatedClass (User.class);
 
 		return configuration;
 	}

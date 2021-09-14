@@ -20,6 +20,14 @@ public class Movies {
     @ManyToOne
     private User user;
 
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
     public Movies(){
     }
     public Movies(String title, int publicationYear, long time) {
@@ -67,13 +75,6 @@ public class Movies {
         this.id = id;
     }
 
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
 
     @Override
     public String toString() {
@@ -84,4 +85,5 @@ public class Movies {
                 ", time=" + time +
                 '}';
     }
+
 }

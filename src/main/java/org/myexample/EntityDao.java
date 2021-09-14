@@ -1,6 +1,6 @@
 package org.myexample;
 
-import org.example.HibernateFactory;
+import org.myexample.HibernateFactory;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;

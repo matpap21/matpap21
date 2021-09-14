@@ -2,7 +2,7 @@ package org.myexample;
 
 import javax.persistence.*;
 import java.util.Set;
-
+@Entity
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) //autoincrement
@@ -63,5 +63,13 @@ public class User {
                 ", password='" + password + '\'' +
                 ", login='" + login + '\'' +
                 '}';
+    }
+
+    public Set<Movies> getMovies() {
+        return movies;
+    }
+
+    public void setMovies(Set<Movies> movies) {
+        this.movies = movies;
     }
 }
