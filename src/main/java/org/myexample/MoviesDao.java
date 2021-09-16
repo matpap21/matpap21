@@ -31,12 +31,10 @@ public class MoviesDao {
 
     public void removeId(Long id) {
         final Session session = HibernateFactory.getSessionFactory ( ).openSession ( );
-
-        Transaction finding = session.beginTransaction ( );
-
-        Movies movieToBeRemoved = session.get (Movies.class, id);
+        final Transaction transaction = session.beginTransaction ( );
+        final Movies movieToBeRemoved = session.get (Movies.class, id);
         session.remove (movieToBeRemoved);
-        finding.commit ( );
+        transaction.commit ( );
         session.close ( );
     }
 
@@ -58,7 +56,6 @@ public class MoviesDao {
         session.update (movie);
         transaction.commit ();
         session.close ();
-        return;
 
     }
 }

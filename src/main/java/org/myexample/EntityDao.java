@@ -1,13 +1,13 @@
 package org.myexample;
 
-import org.myexample.HibernateFactory;
+import org.example.HibernateFactory;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
 public class EntityDao<T> {
     public T save(T movie, Class<T> classType){
-        final SessionFactory sessionFactory = HibernateFactory.getSessionFactory();
+        final SessionFactory sessionFactory = org.example.HibernateFactory.getSessionFactory();
         final Session session = sessionFactory.openSession();
         final Transaction transaction = session.beginTransaction();
         final Long savedId = (Long)session.save(movie);
@@ -18,7 +18,7 @@ public class EntityDao<T> {
     }
 
     public T getById(Long id, Class<T> classType){
-        final Session session = HibernateFactory.getSessionFactory()
+        final Session session = org.example.HibernateFactory.getSessionFactory()
                 .openSession();
         T movie = session.get(classType, id);
         session.close();
@@ -26,7 +26,7 @@ public class EntityDao<T> {
     }
 
     public T remove(Long id, Class<T> classType){
-        final Session session = HibernateFactory.getSessionFactory()
+        final Session session = org.example.HibernateFactory.getSessionFactory()
                 .openSession();
         final Transaction transaction = session.beginTransaction();
         final T movie = session.get(classType, id);

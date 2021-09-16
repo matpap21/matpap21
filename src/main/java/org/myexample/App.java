@@ -14,12 +14,12 @@ public class App {
         //final Movies Jak_jest_to_zrobione = new Movies ( "Jak_jest_to_zrobione",2015,15 );
         //movieDao.save (Jak_jest_to_zrobione);
 
-        movieFromDB.setTitle ("Jak to jest zrobione");
+        movieFromDB.setTitle ("droga_przez_meke");
         movieDao.update (movieFromDB);
         System.out.println ("MOVIE AFTER UPDATE: " + movieDao.getById (savemovie.getId ( ), Movies.class));
 
 
-        movieDao.remove (savemovie.getId ( ),Movies.class);
+        //movieDao.remove (savemovie.getId ( ),Movies.class);
 
         //final Movies movie_remove = movieDao.remove (1L);
         //System.out.println ("MOVIE " + movie_remove + " removed" );
@@ -30,12 +30,12 @@ public class App {
         //dodawanie filmu do Authora
         author.setMovies (movieFromDB);
 
-        final Author JS = authorDao.save (author,Author.class);
+        final Author Juliusz_Slowacki = authorDao.save (author,Author.class);
 
         //wyciagniecie z bazy danych
         //final Author
 
-        System.out.println (JS );
+        System.out.println (Juliusz_Slowacki );
 
         //user
         System.out.println("USER!");

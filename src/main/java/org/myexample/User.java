@@ -49,6 +49,10 @@ public class User {
         this.login = login;
     }
 
+    public User(){
+
+    }
+
     public User(String username, String password, String login) {
         this.username = username;
         this.password = password;
