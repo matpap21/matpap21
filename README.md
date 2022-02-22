@@ -1,4 +1,6 @@
 ### Hi there 👋
+My name is Mateusz, currently I'm learning Java programming.
+You re weolcome :) 
 
 <!--
 **matpap21/matpap21** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
